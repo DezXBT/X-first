@@ -111,7 +111,7 @@ client.on('messageCreate', async (message) => {
             const resultEmbed = new EmbedBuilder()
                 .setColor(0x00FF00)
                 .setTitle(`🏆 20 Follower Pertama @${username}`)
-                .setDescription(`Ditemukan total **${followers.length.toLocaleString()}** pengikut.\nBerikut adalah akun-akun yang mem-follow paling awal:`)
+                .setDescription(`Berikut adalah akun-akun yang mem-follow paling awal:`)
                 .setTimestamp();
 
             firstFollowers.forEach((user, index) => {
