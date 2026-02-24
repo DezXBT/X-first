@@ -117,7 +117,7 @@ client.on('messageCreate', async (message) => {
             firstFollowers.forEach((user, index) => {
                 resultEmbed.addFields({
                     name: `#${index + 1} - ${user.name}`,
-                    value: `[@${user.screen_name}](https://x.com/${user.screen_name})\nID: \`${user.id_str}\``,
+                    value: `[@${user.screen_name}](https://x.com/${user.screen_name}) — 👥 **${(user.followers_count || 0).toLocaleString()}** pengikut`,
                     inline: false
                 });
             });
