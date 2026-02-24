@@ -3,7 +3,7 @@
 Bot Discord untuk menganalisis dan menemukan **First Followers** (pengikut pertama) dari akun X (Twitter) mana pun. Dibangun menggunakan `discord.js` dan ditenagai oleh SocialData API.
 
 ## ✨ Fitur
-- **Cek First Follower:** Menemukan daftar pengikut paling awal dari sebuah akun X.
+- **Cek First Follower:** Menemukan daftar 20 pengikut paling awal dari sebuah akun X.
 - **Analisis Akun:** Memberikan informasi dasar akun target.
 - **Format Cantik:** Hasil ditampilkan menggunakan Discord Embed yang rapi.
 

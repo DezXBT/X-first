@@ -102,7 +102,7 @@ client.on('messageCreate', async (message) => {
                 return statusMsg.edit({ content: `❌ User @${username} tidak ditemukan atau API Error.`, embeds: [] });
             }
 
-            const firstFollowers = await getFirstFollowers(userId, 5);
+            const firstFollowers = await getFirstFollowers(userId, 20);
 
             if (firstFollowers.length === 0) {
                 return statusMsg.edit({ content: `❌ Gagal mengambil data follower untuk @${username}.`, embeds: [] });
@@ -110,7 +110,7 @@ client.on('messageCreate', async (message) => {
 
             const resultEmbed = new EmbedBuilder()
                 .setColor(0x00FF00)
-                .setTitle(`🏆 5 Follower Pertama @${username}`)
+                .setTitle(`🏆 20 Follower Pertama @${username}`)
                 .setDescription('Berikut adalah akun-akun yang mem-follow paling awal (berdasarkan urutan data):')
                 .setTimestamp();
 
