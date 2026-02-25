@@ -82,15 +82,11 @@ client.on('messageCreate', async (message) => {
     if (command === 'cek-first') {
         let usernameInput = args[0];
         if (!usernameInput) {
-            return message.reply('Tolong berikan username X (Twitter), contoh: `!cek-first @Twitter`');
+            return message.reply('Tolong berikan username X (Twitter), contoh: `!cek-first Twitter`');
         }
 
-        // Fix mention bug: if input is a Discord mention <@ID>, extract nothing or warn
-        if (usernameInput.includes('<@')) {
-            return message.reply('Tolong jangan gunakan mention Discord. Ketik username X secara manual, contoh: `!cek-first @Twitter`');
-        }
-
-        const username = usernameInput.replace('@', '');
+        // Clean any mention tags if user still uses them by accident
+        const username = usernameInput.replace(/[<@!&>]/g, '');
         
         const loadingEmbed = new EmbedBuilder()
             .setColor(0x1DA1F2)
