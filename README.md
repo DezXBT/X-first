@@ -51,9 +51,10 @@ node src/index.js
 
 ### 5. Cara Penggunaan di Discord
 Cukup ketik perintah ini di channel server kamu:
-`!cek-first @username`
+`!cek-first username`
 
-Contoh: `!cek-first @elonmusk`
+Contoh: `!cek-first elonmusk`
+(Bot akan otomatis membersihkan input jika kamu menyertakan simbol @ atau mention).
 
 ## 🛡️ Keamanan
 - File `.env` sudah otomatis diabaikan oleh `.gitignore` agar tidak terunggah ke internet.
